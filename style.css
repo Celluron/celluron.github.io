@@ -10,5 +10,7 @@ h1 {
   color: White;
   font-size: 96px;
   margin-top: 300px;
-  text-decoration: underline;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding: 0rem 5rem 3rem 10rem;
 }
