@@ -14,3 +14,10 @@ h1 {
 hr {
  color: white; 
 }
+
+nav {
+  list-style-type: none;
+  display: inline-block; 
+  margin: 0;
+  padding: 0;
+}
