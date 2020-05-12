@@ -1,23 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
 	<head>
+        <h1 id="home"></h1>
+    <br>
 		<meta charset = "utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<title>Celluron</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*, ::before, ::after {
+     transition: all ease-in-out 250ms; 
+		 scroll-behavior: smooth;
+ }
+    
+body {
+  background: url('https://cdn.discordapp.com/attachments/705222312789671966/709259469325860915/image0.png') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+      header {
+      	height: 100%;
+      }
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    color: White;
+    font-size: 96px;
+    margin-top: 300px;
+  border-bottom:5px solid white;
+  margin-left: auto;
+  margin-right: 20px;
+  width:400; 
+  padding-bottom:5px;
+}
+hr {
+    color: white; 
+}
+      nav {
+      	position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+nav li {
+	font-family: sans-serif;
+  float: right;
+  text-align: right;
+  border-right:1px solid #bbb;
+  list-style: none;
+  padding: 0 10px; 
+  display: inline-block;
+  border-left: 1px solid white;
+  line-height: 0px; 
+  margin: 20px 0; 
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+      
+    </style>
   	</head>
   
   	<body>
 		<nav>
 			<ul>
-			  	<li><a href="index.html">Home</a></li>
-			  	<li><a href="projects.html">Projects</a></li>
-				<li><a href="about.html">About</a></li>
+			  	<li><a href="#about">About</a></li>
+         <li><a href="#graphic-design">Graphic Design</a></li>
+			  	<li><a href="#projects">Projects</a></li>
+				<li><a href="#home">Home</a></li>
 			</ul>
 		</nav>
-    		<header>
+    	<header class="home">
   			<h1>Celluron </h1>
-			<hr />
-		    </header>                                                          
+		</header>  
+		<section class="projects">
+			<div class="container">
+
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+
+			</div>
+		</section>
+      
+      <h1 id="projects"></h1>
+      <img src="https://cdn.discordapp.com/attachments/705222312789671966/709619132399878185/pg3.PNG"
+           width="1500" height="750" alt="items" class="responsive">
+      <br>
+      <h1 id="graphic-design"></h1>
+      <img src="https://cdn.discordapp.com/attachments/705222312789671966/709642690240839730/pg4.PNG" width="1500" height="750" class="responsive">
+      <br>
+       <h1 id="about"></h1>
+         <img src="https://cdn.discordapp.com/attachments/705222312789671966/709617304417075300/pg2.PNG" width="1500" height="750" alt="team" class="responsive">
+      
+      <br>
 	</body>
-</html>
+</html>pj
