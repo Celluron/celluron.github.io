@@ -21,4 +21,19 @@ $(document).ready(function(){
       });
     } // End if
   });
+  
+  // Ice God doesn't know anything so this could screw everything IDK
+  
+  /*
+  $("#pic").mouseenter(function() {
+    $("#pic").animate({width: "1600px", height: "800px"}) 
+    $("#pic").fadeTo("fast", 0.4); 
+  });
+  
+  $("#pic").mouseleave(function() {
+    $("#pic").animate({width: "1500px", height: "750px"}) 
+    $("#pic").fadeTo("fast", 1);
+  });
+  */
+  
 });
