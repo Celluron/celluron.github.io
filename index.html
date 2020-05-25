@@ -1,135 +1,219 @@
 <!DOCTYPE html>
 <html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
 	<head>
-		<title>Celluron</title>
-		
+        <h1 id="home"></h1>
+    <br>
 		<meta charset = "utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="script.js"></script>
-		
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-			*, ::before, ::after {
-				transition: all ease-in-out 250ms; 
-				scroll-behavior: smooth;
-			}
+		<title>Celluron</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-			body {
-				background: url('https://cdn.discordapp.com/attachments/705222312789671966/709259469325860915/image0.png') no-repeat center center fixed;
-				-moz-background-size: cover;
-				-webkit-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-				margin: 0px;
-				padding: 0px;
-			}
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-			header {
-				height: 100%;
-			}
+      // Store hash
+      var hash = this.hash;
 
-			header h1 {
-				font-family: 'Roboto', sans-serif;
-				text-align: right;
-				color: White;
-				font-size: 96px;
-				margin-top: 300px;
-				border-bottom:5px solid white;
-				margin-left: auto;
-				margin-right: 20px;
-				width:400; 
-				padding-bottom:5px;
-			}
-			
-			hr {
-				color: white; 
-			}
-			
-			nav {
-				position: fixed;
-				top: 0;
-				width: 100%;
-			}
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
 
-			nav ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-				background-color: black;
-			}
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  // Ice God doesn't know anything so this could screw everything IDK
+  
+  /*
+  $("#pic").mouseenter(function() {
+    $("#pic").animate({width: "1600px", height: "800px"}) 
+    $("#pic").fadeTo("fast", 0.4); 
+  });
+  
+  $("#pic").mouseleave(function() {
+    $("#pic").animate({width: "1500px", height: "750px"}) 
+    $("#pic").fadeTo("fast", 1);
+  });
+  */
+  
+});
+</script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*, ::before, ::after {
+     transition: all ease-in-out 250ms; 
+		 scroll-behavior: smooth;
+ }
+    
+body {
+  background: url('https://cdn.discordapp.com/attachments/705222312789671966/709259469325860915/image0.png') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
 
-			nav li {
-				font-family: sans-serif;
-				float: right;
-				text-align: right;
-				border-right:1px solid #bbb;
-				list-style: none;
-				padding: 0 10px; 
-				display: inline-block;
-				border-left: 1px solid white;
-				line-height: 0px; 
-				margin: 20px 0; 
-			}
+      header {
+      	height: 100%;
+      responsive 
+      }
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    color: White;
+    font-size: 170px;
+    margin-top: 350px;
+  border-bottom:8px solid white;
+  margin-left: auto;
+  margin-right: 90px;
+  width:750; 
+  padding-bottom:0px;
+}
+hr {
+    color: white; 
+}
+      
+      header h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    color: White;
+    font-size: 50px;
+    margin-top: -85px;
+  margin-left: auto;
+  margin-right: 90px;
+}
+hr {
+    color: white; 
+}
+      nav {
+      	position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+      }
 
-			nav li:last-child {
-				border-right: none;
-			}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  	z-index: 10;
+ 
+}
 
-			nav li a {
-				display: block;
-				color: white;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-			}
+nav li {
+	font-family: sans-serif;
+  float: right;
+  text-align: right;
+  border-right:1px solid #bbb;
+  list-style: none;
+  padding: 0 10px; 
+  display: inline-block;
+  border-left: 1px solid white;
+  line-height: 0px; 
+  margin: 20px 0; 
+}
 
-			nav li a:hover:not(.active) {
-				background-color: #111;
-			}
+nav li:last-child {
+  border-right: none;
+}
 
-			.active {
-				background-color: #4CAF50;
-			}
-			
-			.responsive {
-				width: 100%;
-				height: auto;
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  z-index: 10
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+      
+.projects  {
+	position: relative;
+  top: 300px;
+  z-index: 1;
+}
+.graphicdesign   {
+	position: relative;
+  top: -23px;
+  z-index: 1;
+}
+      
+.about {
+	position: relative;
+  top: -23px;
+  z-index: 1;
+}
+.nav {
+	z-index: 10;
+}
+    </style>
+  	</head>
+  
+  	<body>
 		<nav>
 			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#graphic-design">Graphic Design</a></li>
-				<li><a href="#projects">Projects</a></li>
+        <div class="nav">
+			  	<li><a href="#about">About</a></li>
+         <li><a href="#graphic-design">Graphic Design</a></li>
+			  	<li><a href="#projects">Projects</a></li>
 				<li><a href="#home">Home</a></li>
+        </div>
 			</ul>
 		</nav>
-		
-		<header id="home">
-			<h1>Celluron </h1>
-		</header>
-		<section id="projects">
+    	<header class="home">
+  			<h1>Celluron </h1>
+        <h2>To work with the future</h2>
+		</header>  
+		<section class="projects">
 			<div class="container">
-				<img src="https://cdn.discordapp.com/attachments/705222312789671966/709619132399878185/pg3.PNG" width="1500" height="750" alt="items" class="responsive">
+
 			</div>
 		</section>
-		<section id="graphic-design">
+		<section class="about">
 			<div class="container">
-				<img src="https://cdn.discordapp.com/attachments/705222312789671966/709642690240839730/pg4.PNG" width="1500" height="750" class="responsive">
+
 			</div>
 		</section>
-		<section id="about">
-			<div class="container">
-				<img src="https://cdn.discordapp.com/attachments/705222312789671966/709617304417075300/pg2.PNG" width="1500" height="750" alt="team" class="responsive">
-			</div>
-		</section>
+      <div class="projects">
+      <h1 id="projects"></h1>
+      <img src="https://cdn.discordapp.com/attachments/705222312789671966/709619132399878185/pg3.PNG"
+           width="1500" height="750" alt="items" class="responsive">
+      <br>
+
+        
+        <div class="graphicdesign">
+      <h1 id="graphic-design"></h1>
+      <img id="pic" src="https://cdn.discordapp.com/attachments/705222312789671966/709642690240839730/pg4.PNG" width="1500" height="750" class="responsive">
+      <br>
+          <div class="about">
+       <h1 id="about"></h1>
+         <img src="https://cdn.discordapp.com/attachments/705222312789671966/709617304417075300/pg2.PNG" width="1500" height="750" alt="team" class="responsive">
+      <br>
 	</body>
-</html>
